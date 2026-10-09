@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffd8e7">
+<title>For Aarathana, With Love 💗</title>
+<style>
+:root{--pink:#f48fb1;--hot:#e85d91;--pale:#fff3f8;--ink:#694452;--cream:#fffafc}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:linear-gradient(145deg,#fff6fa,#ffe2ed 55%,#fff8fb);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#f48fb1 1px,transparent 1px);background-size:22px 22px}
+.heart{position:fixed;bottom:-40px;z-index:0;pointer-events:none;animation:floatUp linear forwards;opacity:.55}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.wrap{position:relative;z-index:1;width:min(100% - 28px,680px);margin:0 auto;padding:22px 0 46px}
+.topline{text-align:center;font:700 11px/1.5 Arial,sans-serif;letter-spacing:3px;color:#c56b8b;text-transform:uppercase;margin:10px 0 18px}
+.card{background:rgba(255,255,255,.82);border:1px solid #ffe0eb;border-radius:25px;padding:26px 22px;box-shadow:0 14px 40px #d76c9217;margin:14px 0;backdrop-filter:blur(8px)}
+.hero{text-align:center;padding:34px 22px 28px;background:linear-gradient(150deg,#fff,#fff0f6);overflow:hidden}
+.eyebrow{font:700 11px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#d47b9b}
+h1{font-size:clamp(32px,8vw,54px);line-height:1.06;margin:12px 0;color:#a84870;font-weight:normal}
+h2{font-size:26px;font-weight:normal;text-align:center;margin:4px 0 10px;color:#b75279}
+p{font-size:17px;line-height:1.7;margin:12px 0}
+.sub{font-size:15px;color:#9b6d7d}
+.bigheart{font-size:50px;display:block;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+button{border:0;border-radius:999px;padding:13px 21px;background:linear-gradient(135deg,#f48fb1,#df5b8e);color:white;font-size:14px;font-weight:bold;cursor:pointer;box-shadow:0 7px 17px #df5b8e30;transition:transform .2s}
+button:hover{transform:translateY(-2px)}
+button.secondary{background:#fff;color:#bc6284;border:1px solid #f6c5d7;box-shadow:none}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.step{display:none;animation:fade .45s ease}
+.step.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.label{font:700 11px Arial,sans-serif;letter-spacing:2px;text-align:center;color:#cc7895;text-transform:uppercase}
+.note{background:#fff9fc;border:1px dashed #efb5ca;border-radius:18px;padding:20px;margin:18px 0}
+.note p{font-style:italic}
+.editable{border:1px solid #f2c2d3;background:#fffafd;border-radius:12px;padding:10px 12px;width:100%;font:15px Arial,sans-serif;color:#805163}
+label{font:12px Arial,sans-serif;color:#a66b81;display:block;margin:12px 0 5px}
+.photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:20px 0}
+.photo{background:#fff;border:1px solid #f8d8e4;border-radius:17px;padding:10px;text-align:center;box-shadow:0 8px 18px #d76c9210}
+.photo img{width:100%;height:190px;object-fit:cover;border-radius:11px;background:#ffe8f1;display:block}
+.photo .caption{font-size:15px;margin:10px 0 4px}
+.upload{display:block;font:11px Arial,sans-serif;color:#b96887;margin-top:8px;overflow-wrap:anywhere}
+.upload input{width:100%;font-size:10px;margin-top:5px}
+.meter{height:13px;border-radius:99px;background:#ffe0eb;overflow:hidden;margin:16px 0 8px}
+.meter span{display:block;width:0;height:100%;background:linear-gradient(90deg,#f9a6c2,#df5b8e);transition:width .7s}
+.center{text-align:center}
+.small{font:12px Arial,sans-serif;color:#b2778e}
+.giftgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.gift{border:1px solid #f7d0df;background:#fffafd;border-radius:16px;padding:16px;text-align:center}
+.gift .emoji{font-size:28px}
+.gift h3{font-size:17px;font-weight:normal;margin:8px 0}
+.gift p{font-size:13px;line-height:1.5}
+.footer{text-align:center;font:11px Arial,sans-serif;color:#bc8b9e;margin-top:24px}
+.confetti{position:fixed;top:-20px;z-index:10;pointer-events:none;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(650deg);opacity:.2}}
+@media(max-width:430px){.card{padding:23px 17px}.photo img{height:150px}.photos{gap:9px}.giftgrid{gap:9px}.gift{padding:13px 9px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topline">a tiny page made just for you ♡</div>
+
+  <section class="step active" id="s1">
+    <div class="card hero">
+      <span class="bigheart">💗</span>
+      <div class="eyebrow">please read this with an open heart</div>
+      <h1>Hey, <span id="heroName">Aarathana</span>…</h1>
+      <p>I made this little pink corner of the world just for you, Aarathana, because there are things I want to say properly.</p>
+      <p class="sub">No pressure. Just a sincere message from me to you.</p>
+      <div class="actions"><button onclick="go(2)">Open my heart 💌</button></div>
+    </div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="card">
+      <div class="label">first, i need to say this</div>
+      <h2>I'm truly sorry.</h2>
+      <p>I know I hurt you, and I’m not going to pretend that a cute website or a few words can undo that. You deserved honesty, care, and respect from me.</p>
+      <p>I take responsibility for my actions. I’m sorry for the pain I caused and for the moments when I made you feel like your feelings didn’t matter. You didn’t deserve that.</p>
+      <p>I’m not asking you to forget what happened or to forgive me before you’re ready. I just want you to know that I understand this matters, and I want to do better through my actions—not just promises.</p>
+      <div class="actions"><button onclick="go(3)">A few memories… 🧸</button><button class="secondary" onclick="go(1)">Back</button></div>
+    </div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="card">
+      <div class="label">little pieces of us</div>
+      <h2>Some Sweet Moments 📸</h2>
+      <p class="center sub">Add your own photos below to make this page personal.</p>
+      <div class="photos">
+        <div class="photo"><img id="img1" alt="Our memory" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='380'%3E%3Crect width='100%25' height='100%25' fill='%23ffe5ef'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle' fill='%23d8799b'%3E♡%3C/text%3E%3Ctext x='50%25' y='60%25' font-size='18' text-anchor='middle' fill='%23a85b7a'%3Eour memory%3C/text%3E%3C/svg%3E"><div class="caption">One of my favourites 💗</div><label class="upload">Choose a photo<input type="file" accept="image/*" onchange="photo(event,'img1')"></label></div>
+        <div class="photo"><img id="img2" alt="Another memory" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='380'%3E%3Crect width='100%25' height='100%25' fill='%23fff0f6'/%3E%3Ctext x='50%25' y='45%25' font-size='60' text-anchor='middle' fill='%23d8799b'%3E♡%3C/text%3E%3Ctext x='50%25' y='60%25' font-size='18' text-anchor='middle' fill='%23a85b7a'%3Eyou & me%3C/text%3E%3C/svg%3E"><div class="caption">A moment I treasure 🥹</div><label class="upload">Choose a photo<input type="file" accept="image/*" onchange="photo(event,'img2')"></label></div>
+      </div>
+      <div class="actions"><button onclick="go(4)">One more thing 💌</button><button class="secondary" onclick="go(2)">Back</button></div>
+    </div>
+  </section>
+
+  <section class="step" id="s4">
+    <div class="card">
+      <div class="label">a letter from me to you</div>
+      <h2>Dear <span id="letterName">Aarathana</span> 🤍</h2>
+      <div class="note">
+        <p>I miss the comfort of us, the little conversations, the laughter, and the way even ordinary days felt special with you.</p>
+        <p>But I know missing you isn’t enough. If I want to be part of your life, I need to show you that I can listen, be honest, respect your boundaries, and make changes consistently.</p>
+        <p>I still care about you deeply. If there’s ever a chance for us to start again, I’d want to rebuild things slowly—with patience, honesty, and trust. I’ll respect your decision either way, even if it’s not the one I hope for.</p>
+        <p>I'm sorry for hurting you. You mean so much to me, and I wish I had handled things differently.</p>
+        <p style="text-align:right">With all my heart,<br><strong>someone who is truly sorry ❤️</strong></p>
+      </div>
+      <div class="actions"><button onclick="go(5)">Can I ask you something? 🥺</button><button class="secondary" onclick="go(3)">Back</button></div>
+    </div>
+  </section>
+
+  <section class="step" id="s5">
+    <div class="card center">
+      <div class="label">only if you're comfortable</div>
+      <h2>Could we talk someday? 🥺</h2>
+      <p>I’m not asking you to say yes right now. If and when you feel ready, I’d be grateful for a chance to listen to you and understand how you feel.</p>
+      <p>Would you be open to talking about us again, when you're ready?</p>
+      <div class="actions"><button onclick="answerYes()">Maybe, let's talk 💗</button><button class="secondary" onclick="answerLater()">I need more time 🤍</button></div>
+      <p class="small" id="answer" aria-live="polite"></p>
+      <div class="meter"><span id="meterFill"></span></div>
+      <div class="small" id="meterText">Forgiveness isn't a score or a deadline. Take all the time you need.</div>
+      <div class="actions"><button class="secondary" onclick="go(6)">A little ending note 🌷</button><button class="secondary" onclick="go(4)">Back to letter</button></div>
+    </div>
+  </section>
+
+  <section class="step" id="s6">
+    <div class="card">
+      <div class="label">no pressure, just love</div>
+      <h2>I still choose you, Aarathana. ❤️‍🩹</h2>
+      <p>Thank you for reading this. I know rebuilding trust takes time, and I don’t expect this page to fix everything. I’ll do my best to let my actions speak louder than my words.</p>
+      <div class="giftgrid">
+        <div class="gift"><div class="emoji">☕</div><h3>A calm conversation</h3><p>Whenever you feel ready, I’ll listen without arguing or interrupting.</p></div>
+        <div class="gift"><div class="emoji">🫶</div><h3>More understanding</h3><p>I want to respect your feelings and boundaries better.</p></div>
+        <div class="gift"><div class="emoji">🌷</div><h3>Small steps</h3><p>No rushing. Trust should be rebuilt honestly, over time.</p></div>
+        <div class="gift"><div class="emoji">💌</div><h3>A sincere apology</h3><p>No excuses. I’m sorry for the hurt I caused.</p></div>
+      </div>
+      <div class="note center"><span class="bigheart">💗</span><p>I still choose you, Aarathana. Today, tomorrow, and every day. ❤️‍🩹 I hope I can show you that through my actions, with patience and honesty.</p></div>
+      <div class="actions"><button onclick="replay()">Read it again ↻</button></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="label">make it yours</div>
+    <label for="nameInput">Her name or nickname</label>
+    <input class="editable" id="nameInput" maxlength="35" placeholder="Aarathana" value="Aarathana" oninput="setName(this.value)">
+    <p class="small">Tip: add your photos above, then share this HTML file with her. Her name and photos stay in this page on your device unless you save and share the updated file.</p>
+  </section>
+  <div class="footer">made with care, honesty & a little hope ♡</div>
+</div>
+<script>
+function go(n){document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));document.getElementById('s'+n).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(n===5) document.getElementById('meterFill').style.width='0%';}
+function setName(v){let name=v.trim()||'my love';document.getElementById('heroName').textContent=name;document.getElementById('letterName').textContent=name;}
+function photo(e,id){const f=e.target.files&&e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>document.getElementById(id).src=r.result;r.readAsDataURL(f);}
+function answerYes(){document.getElementById('answer').textContent='Thank you for being open to a conversation. I’ll listen and respect your pace. 💗';document.getElementById('meterFill').style.width='70%';document.getElementById('meterText').textContent='A little hope — and no pressure. Trust takes time.';confetti();}
+function answerLater(){document.getElementById('answer').textContent='I understand. Take the time you need. I won’t pressure you. 🤍';document.getElementById('meterFill').style.width='25%';document.getElementById('meterText').textContent='Your feelings and boundaries come first.';}
+function replay(){document.getElementById('answer').textContent='';document.getElementById('meterFill').style.width='0%';go(1);}
+function confetti(){const items=['💗','💕','♡','🌸','✨'];for(let i=0;i<24;i++){let e=document.createElement('div');e.className='confetti';e.textContent=items[Math.floor(Math.random()*items.length)];e.style.left=Math.random()*100+'vw';e.style.animationDelay=Math.random()*.8+'s';e.style.fontSize=(14+Math.random()*18)+'px';document.body.appendChild(e);setTimeout(()=>e.remove(),4000);}}
+setInterval(()=>{let e=document.createElement('div');e.className='heart';e.textContent=['♡','♥','💗'][Math.floor(Math.random()*3)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(14+Math.random()*20)+'px';e.style.animationDuration=(7+Math.random()*6)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),14000);},1300);
+</script>
+</body>
+</html>
